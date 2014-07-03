@@ -13,4 +13,4 @@ Box to get a Solr environment quickly up and running in a VM. If you plan to mod
 
 
 ####Note
-If you have problems with the startup job double check that scripts/etc/init/solr.conf has LF endings and not CRLF
+If you have problems with the upstart job double check that scripts/etc/init/solr.conf has LF endings and not CRLF

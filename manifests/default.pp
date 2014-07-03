@@ -20,7 +20,7 @@ class must-have {
     require => [ Apt::Ppa["ppa:webupd8team/java"], Package["git-core"] ],
   }
 
-  package { ["vim", "curl", "git-core", "bash"]:
+  package { ["vim", "curl", "git-core", "bash", "links", "screen"]:
     ensure => present,
     require => Exec["apt-get update"],
     before => Apt::Ppa["ppa:webupd8team/java"],
@@ -47,7 +47,7 @@ class must-have {
   }
 
   exec { "download_solr":
-    command => "curl -L https://archive.apache.org/dist/lucene/solr/4.7.0/solr-4.7.0.tgz | tar zx --directory=/vagrant/solr --strip-components 1",
+    command => "curl -L https://archive.apache.org/dist/lucene/solr/3.4.0/apache-solr-3.4.0.tgz | tar zx --directory=/vagrant/solr --strip-components 1",
     cwd => "/vagrant",
     user => "vagrant",
     path => "/usr/bin/:/bin/",
