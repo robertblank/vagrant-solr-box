@@ -4,6 +4,13 @@ Box to get a Solr environment quickly up and running in a VM. If you plan to mod
 
 ## Running the box
 
-1. Install [Vagrant](http://www.vagrantup.com/)
-2. `vagrant up`
-3. Open http://localhost:8983/solr/#/ (on host)
+1. After cloning run:
+`git submodule init`
+`git submodule update`
+2. Install [Vagrant](http://www.vagrantup.com/)
+3. Run `vagrant up`
+4. Open http://localhost:8983/solr/#/ (on host)
+
+
+####Note
+If you have problems with the startup job double check that scripts/etc/init/solr.conf has LF endings and not CRLF
